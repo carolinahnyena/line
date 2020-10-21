@@ -1,0 +1,616 @@
+@charset "utf-8";
+
+/* h2, h3 우측 초록 아이콘 누르면 새 페이지로 이동 */
+.open_now {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background-image: url(../images/spritePC200706.png);
+	background-repeat: no-repeat;
+	background-position: -881px 0;
+}
+
+#wrap {
+	font-family: '나눔고딕';
+}
+
+.wrap_header,
+.wrap_gnb_language,
+.article_wrap,
+.wrap_footer {
+	width: 960px;
+	margin: 0 auto;
+}
+header {
+	position: relative;
+	height: 70px;
+}
+.wrap_header {
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	border-bottom: 3px solid #000;
+	box-sizing: border-box;
+	background-color: #fff;
+	z-index: 1000;
+}
+
+.wrap_gnb_language {
+	position: relative;
+}
+
+h1,
+.gnb,
+.language {
+	position: absolute;
+}
+
+.wrap_gnb_language > h1 {
+	width: 60px;
+	text-indent: -9999px;
+	background-image: url(../images/logo160629.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	top: 25px;
+}
+h1 > a {
+	display: block;
+}
+.wrap_gnb_language > ul {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+
+	top: 30px;
+}
+.gnb {
+	width: 300px;
+	left: 80px;
+}
+
+.gnb > li {
+	padding-right: 15px;
+	border-right: 1px solid gray;
+}
+.gnb li a {
+	display: block;
+}
+.gnb > li a:active {
+	font-weight: 800;
+}
+.gnb > li:last-child {
+	border-right: 0;
+}
+.language {
+	position: relative;
+	padding: 5px 10px;
+	width: 150px;
+	outline: 1px solid black;
+	box-sizing: border-box;
+	right: 0;
+	background-color: #fff;
+}
+.language::before {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 6px;
+	top: 10px;
+	right: 6px;
+	background-image: url(../images/spritePC200706.png);
+	background-repeat: no-repeat;
+	background-position: -897px 0;
+}
+.language:hover .select_language {
+	display: block;
+}
+.select_language {
+	display: none;
+	position: absolute;
+	width: 150px;
+	background-color: #fff;
+	outline: 1px solid black;
+	box-sizing: border-box;
+
+	top: 26px;
+	left: 0;
+}
+.select_language > li:hover a {
+	color: #00c402;
+	font-weight: 800;
+}
+
+.language_left {
+	left: -150px;
+}
+.select_language > li {
+	padding: 5px 10px;
+}
+
+.select_language > li > a {
+	display: block;
+}
+
+/* 섹션 */
+
+/* index.html 섹션 */
+section.index_section {
+	height: 5000px;
+}
+.slide_img {
+	position: relative;
+	height: 440px;
+	background-image: url(../images/Korean0906.png), url(../images/PC_Game_Play_kr_123123.png),
+		url(../images/PC_Game_rangers_ko_12333.png), url(../images/PC_LINE_Store_ko.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+
+	z-index: -1;
+}
+.index_article.article_wrap {
+	margin-top: 100px;
+}
+.wherever_free,
+.free_phonecall,
+.line_stickers,
+.share_pics,
+.various_functions,
+.more_functions {
+	position: relative;
+	width: 100%;
+	height: 650px;
+	background-repeat: no-repeat;
+
+	z-index: -1;
+}
+.index_article > h2,
+.index_article h2 > span {
+	position: absolute;
+}
+.wherever_free > h2,
+.line_stickers > h2,
+.various_functions > h2 {
+	top: 50px;
+	left: 500px;
+}
+.free_phonecall > h2,
+.share_pics > h2 {
+	top: 50px;
+}
+.line_stickers > h2 {
+	top: 100px;
+	left: 600px;
+}
+.wherever_free {
+	background-image: url(../images/ko_2016_01.png);
+}
+.free_phonecall {
+	background-image: url(../images/ko_2016_02.png);
+	background-position: right top;
+}
+.line_stickers {
+	background-image: url(../images/01_ko.png);
+	height: 800px;
+}
+.share_pics {
+	background-image: url(../images/ko_2016_04.png);
+	background-position: right top;
+}
+.various_functions {
+	background-image: url(../images/OA_KO.png);
+}
+.index_article > h2 {
+	width: 500px;
+	font-size: 50px;
+}
+.index_article > h2 > span {
+	display: block;
+	margin: 10px 0;
+	width: 100%;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 25px;
+}
+.more_functions {
+	height: 550px;
+}
+.more_functions > ul {
+	display: flex;
+	flex-flow: row wrap;
+}
+.more_functions > ul > li {
+	position: relative;
+	width: 33.33333%;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size: 160px 284px;
+}
+.more_functions > ul > li:nth-child(1) {
+	background-image: url(../images/top_timeline_180904.png);
+}
+.more_functions > ul > li:nth-child(2) {
+	background-image: url(../images/ko_2016_07.png);
+}
+.more_functions > ul > li:nth-child(3) {
+	background-image: url(../images/chatlive_kr_02.png);
+}
+.more_functions > ul > li:nth-child(4) {
+	background-image: url(../images/inapp_camera_screenimg.png);
+	margin-top: 20px;
+}
+.more_functions > ul > li:nth-child(5) {
+	background-image: url(../images/Faceplay_global.png);
+	margin-top: 20px;
+}
+
+.more_functions h3 {
+	position: absolute;
+	font-size: 14px;
+	top: 300px;
+}
+.more_functions h3 > span {
+	display: block;
+	margin-top: 10px;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+/* download.html 섹션 */
+section.download_section {
+	display: flex;
+	margin: 0 auto;
+	width: 960px;
+}
+.download_left,
+.download_right {
+	margin: 100px 0;
+	width: 50%;
+	text-align: center;
+}
+
+.download_section h2 {
+	font-size: 35px;
+}
+.download_section h2 span {
+	display: block;
+	margin: 30px 0;
+	height: 219px;
+	text-indent: -99999px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.download_left h2 span {
+	background-image: url(../images/dl_main_mobile_2.png);
+}
+.download_right h2 span {
+	background-image: url(../images/dl_main_pc.png);
+}
+ul.download_from,
+ul.download_by {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+ul.download_from li a {
+	margin: 0 10px;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+article.download_left ul.download_from li:first-child a {
+	width: 182px;
+	background-image: url(../images/dl_google_161229_ko.png);
+}
+article.download_left ul.download_from li:last-child a {
+	width: 201px;
+	background-image: url(../images/dl_ios_161229_ko.png);
+}
+
+article.download_right ul.download_from li:first-child a {
+	width: 218px;
+	background-image: url(../images/dl_windows_161229_ko.png);
+}
+
+ul.download_from a,
+ul.download_by a {
+	display: block;
+	position: relative;
+	margin: 30px 20px;
+	width: 100%;
+	height: 100%;
+
+	background-repeat: no-repeat;
+}
+
+ul.download_by a {
+	height: 80px;
+	opacity: 0.6;
+}
+ul.download_by a:hover {
+	opacity: 1;
+}
+.download_right p a {
+	text-decoration: underline;
+	opacity: 0.6;
+}
+.download_right p a:hover {
+	opacity: 1;
+}
+.download_left ul.download_by li:nth-child(1) a {
+	width: 35px;
+	background-image: url(../images/dl_android_apk_pc_191016_03.png);
+}
+.download_left ul.download_by li:nth-child(2) a {
+	width: 36px;
+	background-image: url(../images/dl_sub_lite.png);
+}
+.download_right ul.download_by li:nth-child(1) a {
+	width: 42px;
+	background-image: url(../images/dl_sub_windowsstore.png);
+}
+.download_right ul.download_by li:nth-child(2) a {
+	width: 51px;
+	background-image: url(../images/dl_sub_macos.png);
+}
+.download_right ul.download_by li:nth-child(3) a {
+	width: 38px;
+	background-image: url(../images/dl_sub_chrome.png);
+}
+
+ul.download_by span {
+	position: absolute;
+	left: 0;
+	top: 60px;
+}
+
+/* family_app.html 섹션 */
+.familyApps_section {
+	height: 1250px;
+}
+.familyApps_section > article,
+.game_section > article {
+	position: relative;
+	margin: 50px 0 0 50px;
+	width: 100%;
+	height: 250px;
+	border-bottom: 1px solid gray;
+	background-repeat: no-repeat;
+}
+.familyApps_section > article:last-child,
+.game_section > article:last-child {
+	border-bottom: 0;
+}
+.familyApps_section > article:nth-child(1) {
+	background-image: url(../images/line_looks_190x190.png);
+	background-repeat: cover;
+}
+.familyApps_section > article:nth-child(2) {
+	background-image: url(../images/190.png);
+	background-repeat: cover;
+}
+.familyApps_section > article:nth-child(3) {
+	background-image: url(../images/linecamera_icon_190.png);
+	background-repeat: cover;
+}
+.familyApps_section > article > h2,
+.download_as,
+.game_section > article > h2 {
+	position: absolute;
+	left: 250px;
+}
+.familyApps_section > article > h2,
+.game_section > article > h2 {
+	margin-top: 10px;
+	font-size: 38px;
+	font-weight: 600;
+}
+.familyApps_section > article > h2 > span,
+.game_section > article > h2 > span {
+	display: block;
+	margin-top: 30px;
+	font-size: 12px;
+}
+.familyApps_section > article > .download_as,
+.game_section > article > .download_as {
+	top: 150px;
+}
+.familyApps_section > article > .download_as > a,
+.wrap_family_apps > .download_as > a,
+.game_section > article > .download_as > a {
+	margin-right: 15px;
+	padding: 4px 45px 4px 10px;
+	color: #fff;
+	font-size: 14px;
+	border: 1px solid gray;
+	background-color: gray;
+	background-image: url(../images/ico_mdCMN02Link.png);
+	background-repeat: no-repeat;
+	background-size: 25px 24px;
+	background-position: right;
+}
+.familyApps_section > article:nth-child(4) {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.familyApps_section > article > .wrap_family_apps {
+	position: relative;
+	width: 50%;
+	height: 160px;
+	background-size: 96px 96px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+.familyApps_section > article > .wrap_family_apps:nth-child(1) {
+	background-image: url(../images/lineat_96.png);
+}
+.familyApps_section > article > .wrap_family_apps:nth-child(2) {
+	background-image: url(../images/FreeCoin_CHERRY_96_0314.png);
+}
+.familyApps_section > article > .wrap_family_apps:nth-child(3) {
+	background-image: url(../images/LP_Family_icon_96_LINE-Antivirus.jpg);
+}
+
+.familyApps_section > article > .wrap_family_apps > h3,
+.familyApps_section > article > .wrap_family_apps > .download_as {
+	position: absolute;
+	left: 120px;
+}
+.familyApps_section > article > .wrap_family_apps > h3 {
+	font-size: 12px;
+	font-weight: 600;
+	top: 20px;
+}
+
+.familyApps_section > article > .wrap_family_apps > h3 > span {
+	display: block;
+	margin-top: 10px;
+	font-weight: 400;
+}
+
+.familyApps_section > article > .wrap_family_apps > .download_as {
+	top: 100px;
+}
+
+/* game.html 섹션*/
+.game_section {
+	height: 2500px;
+}
+.game_section > article {
+	height: 250px;
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 190px 190px;
+}
+.game_section > article:last-child {
+	background-position: right;
+}
+.game_section > article:nth-child(1) {
+	background-image: url(../images/bt21_190.png);
+}
+.game_section > article:nth-child(2) {
+	background-image: url(../images/linechef_icon_190x190_0604.png);
+}
+.game_section > article:nth-child(3) {
+	background-image: url(../images/LINE\ Brown\ stories_190x190_0729.png);
+}
+.game_section > article:nth-child(4) {
+	background-image: url(../images/line_game_190.jpg);
+}
+.game_section > article:nth-child(5) {
+	background-image: url(../images/tm_icon_190.jpg);
+}
+.game_section > article:nth-child(6) {
+	background-image: url(../images/bubble2_190.png);
+}
+.game_section > article:nth-child(7) {
+	background-image: url(../images/linebubble_round_190.png);
+}
+.game_section > article:nth-child(8) {
+	height: 30px;
+}
+.game_section > article:last-child {
+	height: 270px;
+	background-size: 267px 267px;
+	background-image: url(../images/game_lp_ja_pc_bottom_01_1.png);
+}
+.game_section > article:nth-child(3) > .download_as,
+.game_section > article:nth-child(5) > .download_as,
+.game_section > article:nth-child(6) > .download_as {
+	top: 180px;
+}
+
+.game_section > article:last-child > p {
+	font-size: 28px;
+}
+.game_section > article:last-child > p > span {
+	display: block;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.game_section > article:last-child > p > a {
+	display: block;
+	margin-top: 35px;
+	color: blue;
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+/* line_store.html 섹션 */
+.banner {
+	position: relative;
+	height: 440px;
+	background-image: url(../images/PC_LINE_Store_ko_1231231.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+
+	z-index: -1;
+}
+
+.line_store_sticker {
+	height: 800px;
+	background-image: url(../images/ko_2016_02.jpg);
+}
+.line_store_thema {
+	background-image: url(../images/img_store_theme_ko.png);
+}
+.line_store_game {
+	background-image: url(../images/store_lp_ja_04_1.png);
+}
+.line_store_sticker a,
+.line_store_thema a,
+.line_store_game a {
+	color: #00f;
+	text-decoration: underline;
+}
+
+/* 푸터 */
+footer {
+	height: 160px;
+	color: #a3a3a3;
+	background-color: #3b3b3b;
+}
+
+.wrap_footer > ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+	width: 860px;
+}
+.wrap_footer > ul > li {
+}
+.wrap_footer > ul > li > a {
+	padding-right: 10px;
+	color: #a3a3a3;
+	font-size: 11px;
+	border-right: 1px solid #a3a3a3;
+}
+
+.wrap_footer > ul > li:last-child a {
+	border-right: 0;
+}
+.footer_sns {
+	display: flex;
+}
+.footer_sns > a {
+	width: 30px;
+	height: 30px;
+	color: #a3a3a3;
+	text-indent: -99999px;
+}
+.footer_sns > a:first-child {
+	margin-right: 20px;
+	background-image: url(../images/spritePC200706.png);
+	background-position: -1049px 0;
+}
+.footer_sns > a:last-child {
+	background-image: url(../images/spritePC200706.png);
+	background-position: -817px 0;
+}
+address {
+	margin-top: 20px;
+	font-weight: 800;
+}
